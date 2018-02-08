@@ -1,0 +1,125 @@
+﻿body 
+{
+    background-image:url('images/BackColor2.gif');
+    background-repeat:repeat-x;
+}
+
+table tr td
+{
+    padding: 0px;
+}
+
+.OuterTableStyle
+{
+    border: 1px solid #527a67;
+    border-collapse:collapse;
+    border-spacing: 0px;
+    width:790px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.InnerTableStyle
+{
+    border: 1px solid #527a67;
+    border-collapse:collapse;
+    border-spacing: 0px;
+    width:790px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.HeaderCell
+{
+    background-image:url('images/Logo2.gif');
+    background-repeat:no-repeat;
+    height:100px;
+    width:790px;
+    background-position:left;
+}
+
+.Separator0
+{
+    height:1px;
+    width:790px;
+    background-color:#42606a;
+}
+
+.Separator1
+{
+    height:1px;
+    width:790px;
+    background-color:#afccd5;
+}
+
+.Separator2
+{
+    height:1px;
+    width:790px;
+    background-color:#dbe3e6;
+}
+
+.Seperator3
+{
+    height:2px;
+    width:790px;
+    background-color:#9db2ba;
+}
+
+.EmptyCell
+{
+    background-color:#76929c;
+    width:120px;
+    height:20px;
+    margin-left:10px;
+    margin-right:10px;
+}
+
+.MenuCell
+{
+    background-color:#76929c;
+    width:100px;
+    height:30px;
+    margin-left:10px;
+    margin-right:10px;
+    text-align:center;
+    }
+
+a.MenuItems:link, a.MenuItems:Visited,a.MenuItems:Active
+{
+    
+    text-decoration:none;
+    cursor:help;
+    color:#edffff;
+}
+
+a.MenuItems:Hover
+{
+    text-decoration:underline;
+    cursor:help;
+    color:#a3d1e0;
+}
+
+.Text
+{
+    text-align:justify;
+    font-family:Arial;
+    font-size:small;
+    padding:20px;
+    color:#2c4c40;
+    background-image:url('images/BackColorFlipped2.gif');
+    background-repeat:repeat-x;
+    background-position:bottom;
+}
+
+.Footer
+{
+    background-color:#76929c;
+    height:25px;
+    text-align:center;
+    vertical-align:middle;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:10px;
+    font-weight:bold;
+}

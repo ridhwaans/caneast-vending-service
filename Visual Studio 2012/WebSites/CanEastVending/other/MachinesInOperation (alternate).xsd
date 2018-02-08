@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MachinesInOperation"    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:element name ="MachinesInOperation">
+    <xs:complexType>
+      <xs:sequence maxOccurs="unbounded">
+        <xs:element ref ="ActiveMachine"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+
+  <xs:element name ="ActiveMachine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name ="MachineInfo"/>
+        <xs:element name ="Items"/>
+      </xs:sequence>
+      <xs:
+        name="MachineID" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  
+  
+  <xs:element name ="MachineInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref ="ModelName"></xs:element>
+        <xs:element ref ="CustomerID"></xs:element>
+        <xs:element ref ="Name"></xs:element>
+        <xs:element ref ="Address"></xs:element>
+        <xs:element ref ="City"></xs:element>
+        <xs:element ref ="PostalCode"></xs:element>
+        <xs:element ref ="MachineImage"></xs:element>
+      </xs:sequence>
+      <xs:attribute name="City" type="xs:string" use="required"/>
+      <xs:attribute name="ContractStartDate" type="xs:date" use="required"/>
+      <xs:attribute name="NextRestock" type="xs:date" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name ="ModelName" type ="xs:string"/>
+  <xs:element name ="CustomerID" type ="xs:int"/>
+  <xs:element name ="Name" type ="xs:string"/>
+  <xs:element name ="Address" type ="xs:string"/>
+  <xs:element name ="City" type ="xs:string"/>
+  <xs:element name ="PostalCode" type ="xs:string"/>
+  <xs:element name ="MachineImage" type ="xs:anyURI"/>
+</xs:schema>

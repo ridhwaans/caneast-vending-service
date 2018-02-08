@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="findTimeSpan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="input" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findTimeSpanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="findTimeSpanResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="viewCurrentInventory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMachineID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="viewCurrentInventoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="viewCurrentInventoryResult">
+              <s:complexType>
+                <s:annotation>
+                  <s:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </s:appinfo>
+                </s:annotation>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkDateShipped">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strOrderID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkDateShippedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="checkDateShippedResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="findTimeSpanSoapIn">
+    <wsdl:part name="parameters" element="tns:findTimeSpan" />
+  </wsdl:message>
+  <wsdl:message name="findTimeSpanSoapOut">
+    <wsdl:part name="parameters" element="tns:findTimeSpanResponse" />
+  </wsdl:message>
+  <wsdl:message name="viewCurrentInventorySoapIn">
+    <wsdl:part name="parameters" element="tns:viewCurrentInventory" />
+  </wsdl:message>
+  <wsdl:message name="viewCurrentInventorySoapOut">
+    <wsdl:part name="parameters" element="tns:viewCurrentInventoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkDateShippedSoapIn">
+    <wsdl:part name="parameters" element="tns:checkDateShipped" />
+  </wsdl:message>
+  <wsdl:message name="checkDateShippedSoapOut">
+    <wsdl:part name="parameters" element="tns:checkDateShippedResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CanEastVendingWebServicesSoap">
+    <wsdl:operation name="findTimeSpan">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Gets an input start date of a vending machine or customer contract and calculates the difference between the date and today's date to find since how long the contract was active.</wsdl:documentation>
+      <wsdl:input message="tns:findTimeSpanSoapIn" />
+      <wsdl:output message="tns:findTimeSpanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="viewCurrentInventory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Outputs a datatable containing vending machine inventory information based on a MachineID input</wsdl:documentation>
+      <wsdl:input message="tns:viewCurrentInventorySoapIn" />
+      <wsdl:output message="tns:viewCurrentInventorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="checkDateShipped">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the status and date when the order was shipped given an OrderID</wsdl:documentation>
+      <wsdl:input message="tns:checkDateShippedSoapIn" />
+      <wsdl:output message="tns:checkDateShippedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CanEastVendingWebServicesSoap" type="tns:CanEastVendingWebServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="findTimeSpan">
+      <soap:operation soapAction="http://tempuri.org/findTimeSpan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewCurrentInventory">
+      <soap:operation soapAction="http://tempuri.org/viewCurrentInventory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkDateShipped">
+      <soap:operation soapAction="http://tempuri.org/checkDateShipped" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CanEastVendingWebServicesSoap12" type="tns:CanEastVendingWebServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="findTimeSpan">
+      <soap12:operation soapAction="http://tempuri.org/findTimeSpan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewCurrentInventory">
+      <soap12:operation soapAction="http://tempuri.org/viewCurrentInventory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkDateShipped">
+      <soap12:operation soapAction="http://tempuri.org/checkDateShipped" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CanEastVendingWebServices">
+    <wsdl:port name="CanEastVendingWebServicesSoap" binding="tns:CanEastVendingWebServicesSoap">
+      <soap:address location="http://localhost:37926/WebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CanEastVendingWebServicesSoap12" binding="tns:CanEastVendingWebServicesSoap12">
+      <soap12:address location="http://localhost:37926/WebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

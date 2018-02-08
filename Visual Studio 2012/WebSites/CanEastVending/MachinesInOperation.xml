@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="MachinesInOperation.xslt" ?>
+<MachinesInOperation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MachinesInOperation.xsd">
+
+  
+  <ActiveMachine>
+    <Customer>
+      <CustomerID>10009</CustomerID>
+      <CustomerName>James Lee</CustomerName>
+    </Customer>
+    <MachineInfo>
+      <MachineID>40001</MachineID>
+      <ModelName>Vendmaster 2000</ModelName>
+      <City>Vaughan</City>
+      <Address>9580 Jane Street</Address>
+      <PostalCode>L6A 1S6</PostalCode>
+      <ContractStartDate>2012-04-01</ContractStartDate>
+      <NextRestock>2012-11-01</NextRestock>
+      <MachineImage>images/VendMaster 2000.jpg</MachineImage>
+    </MachineInfo>
+    <Items>
+      <Item>Diet Coke</Item>
+      <Item>Pepsi Lime</Item>
+      <Item>Quaker chocolate chunk cookies</Item>
+      <Item>Monster Energy</Item>
+    </Items>
+  </ActiveMachine>
+
+  <ActiveMachine>
+    <Customer>
+      <CustomerID>10003</CustomerID>
+      <CustomerName>Billy Bob</CustomerName>
+    </Customer>
+    <MachineInfo>
+      <MachineID>40002</MachineID>
+      <ModelName>ProVendor</ModelName>
+      <Address>4235 E Spruce Drive</Address>
+      <City>Peterborough</City>
+      <PostalCode>L3L 3T2</PostalCode>
+      <ContractStartDate>2012-05-01</ContractStartDate>
+      <NextRestock>2012-11-12</NextRestock>
+      <MachineImage>images/ProVendor.jpg</MachineImage>
+    </MachineInfo>
+    <Items>
+      <Item>Root Beer Barq's</Item>
+      <Item>Dr Pepper</Item>
+      <Item>Diet Coke</Item>
+      <Item>Canada Dry</Item>
+    </Items>
+  </ActiveMachine>
+
+  <ActiveMachine>
+    <Customer>
+      <CustomerID>10006</CustomerID>
+      <CustomerName>Jane Parker</CustomerName>
+    </Customer>
+    <MachineInfo>
+      <MachineID>40004</MachineID>
+      <ModelName>Vendmaster 3000</ModelName>
+      <Address>892 Brady Road</Address>
+      <City>Oshawa</City>
+      <PostalCode>O4Y 9Q1</PostalCode>
+      <ContractStartDate>2012-08-01</ContractStartDate>
+      <NextRestock>2012-11-10</NextRestock>
+      <MachineImage>images/Vendmaster 3000.jpg</MachineImage>
+    </MachineInfo>
+    <Items>
+      <Item>Pepsi</Item>
+      <Item>7 Up</Item>
+      <Item>Diet Coke</Item>
+      <Item>Original two bite brownies</Item>
+    </Items>
+  </ActiveMachine>
+
+  <ActiveMachine>
+    <Customer>
+      <CustomerID>10004</CustomerID>
+      <CustomerName>John Smith</CustomerName>
+    </Customer>
+    <MachineInfo>
+      <MachineID>40005</MachineID>
+      <ModelName>Vendmaster 3000</ModelName>
+      <Address>8234 Market Street</Address>
+      <City>Toronto</City>
+      <PostalCode>M1G 1C2</PostalCode>
+      <ContractStartDate>2012-09-01</ContractStartDate>
+      <NextRestock>2012-11-01</NextRestock>
+      <MachineImage>images/VendMaster 3000.jpg</MachineImage>
+    </MachineInfo>
+    <Items>
+      <Item>Doritos nacho cheese</Item>
+      <Item>Dentyne ice vanilla frost</Item>
+      <Item>Quaker chocolate chunk cookies</Item>
+      <Item>Ruffles all dressed</Item>
+    </Items>
+  </ActiveMachine>
+
+  <ActiveMachine>
+    <Customer>
+      <CustomerID>10002</CustomerID>
+      <CustomerName>Daniel Frankie</CustomerName>
+    </Customer>
+    <MachineInfo>
+      <MachineID>40007</MachineID>
+      <ModelName>iVend</ModelName>
+      <Address>1234 Hello Road</Address>
+      <City>Toronto</City>
+      <PostalCode>M1G 5G7</PostalCode>
+      <ContractStartDate>2012-09-01</ContractStartDate>
+      <NextRestock>2012-11-20</NextRestock>
+      <MachineImage>images/iVend.jpg</MachineImage>
+    </MachineInfo>
+    <Items>
+      <Item>Pepsi Lime</Item>
+      <Item>Pepsi</Item>
+      <Item>Dr Pepper</Item>
+      <Item>Doritos nacho cheese</Item>
+    </Items>
+  </ActiveMachine>
+
+  <ActiveMachine>
+    <Customer>
+      <CustomerID>10007</CustomerID>
+      <CustomerName>Harry Oswald</CustomerName>
+    </Customer>
+    <MachineInfo>
+      <MachineID>40009</MachineID>
+      <ModelName>Vendmaster 4000</ModelName>
+      <Address>627F Madison Palace</Address>
+      <City>Hamilton</City>
+      <PostalCode>N6J 3B3</PostalCode>
+      <ContractStartDate>2012-08-01</ContractStartDate>
+      <NextRestock>2012-11-22</NextRestock>
+      <MachineImage>images/VendMaster 4000.jpg</MachineImage>
+    </MachineInfo>
+    <Items>
+      <Item>Monster Energy</Item>
+      <Item>Root Beer Barq's</Item>
+      <Item>7 Up</Item>
+      <Item>Dr Pepper</Item>
+      <Item>Nestea cool</Item>
+    </Items>
+  </ActiveMachine>
+
+  <ActiveMachine>
+    <Customer>
+      <CustomerID>10008</CustomerID>
+      <CustomerName>Lisa Ann</CustomerName>
+    </Customer>
+    <MachineInfo>
+      <MachineID>40010</MachineID>
+      <ModelName>Vendmaster 4000</ModelName>
+      <Address>1024 Eglinton Square</Address>
+      <City>Mississauga</City>
+      <PostalCode>V4H 3W7</PostalCode>
+      <ContractStartDate>2012-07-01</ContractStartDate>
+      <NextRestock>2012-11-24</NextRestock>
+      <MachineImage>images/VendMaster 4000.jpg</MachineImage>
+    </MachineInfo>
+    <Items>
+      <Item>Pepsi Lime</Item>
+      <Item>Pepsi</Item>
+      <Item>7 Up</Item>
+      <Item>Monster Energy</Item>
+      <Item>Doritos nacho cheese</Item>
+    </Items>
+  </ActiveMachine>
+
+  <ActiveMachine>
+    <Customer>
+      <CustomerID>10001</CustomerID>
+      <CustomerName>Tim Scott</CustomerName>
+    </Customer>
+    <MachineInfo>
+      <MachineID>40011</MachineID>
+      <ModelName>Vendmaster 4000</ModelName>
+      <Address>2000 Simcoe Street North</Address>
+      <City>Oshawa</City>
+      <PostalCode>L1M 3Z3</PostalCode>
+      <ContractStartDate>2012-05-01</ContractStartDate>
+      <NextRestock>2012-10-11</NextRestock>
+      <MachineImage>images/VendMaster 4000.jpg</MachineImage>
+    </MachineInfo>
+    <Items>
+      <Item>Original two bite brownies</Item>
+      <Item>Quaker chocolate chunk cookies</Item>
+      <Item>Doritos nacho cheese</Item>
+      <Item>Dentyne ice vanilla frost</Item>
+    </Items>
+  </ActiveMachine>
+
+  <ActiveMachine>
+    <Customer>
+      <CustomerID>10005</CustomerID>
+      <CustomerName>Mary Doe</CustomerName>
+    </Customer>
+    <MachineInfo>
+      <MachineID>40012</MachineID>
+      <ModelName>iVend 2.0</ModelName>
+      <Address>2834 Garden Place</Address>
+      <City>Toronto</City>
+      <PostalCode>O6H 5Q1</PostalCode>
+      <ContractStartDate>2012-09-01</ContractStartDate>
+      <NextRestock>2012-11-29</NextRestock>
+      <MachineImage>images/iVend 2.0.jpg</MachineImage>
+    </MachineInfo>
+    <Items>
+      <Item>Original two bite brownies</Item>
+      <Item>Quaker chocolate chunk cookies</Item>
+      <Item>Dr Pepper</Item>
+      <Item>Nestea cool</Item>
+    </Items>
+  </ActiveMachine>
+  
+</MachinesInOperation>

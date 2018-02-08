@@ -1,0 +1,155 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1
+        {
+            width: 100%;
+        }
+        .auto-style4
+        {
+            height: 245px;
+            width: 176px;
+            vertical-align: top;
+            background-color:#516C26;
+        }
+        .auto-style5
+        {
+            height: 52px;
+            background-color:lightgray;
+        }
+        .auto-style6
+        {
+            height: 128px;
+            vertical-align : top;
+        }
+        .auto-style7
+        {
+            height: 52px;
+            width: 176px;
+        }
+        .auto-style8
+        {
+            height: 52px;
+            background-color: lightgray;
+            width: 317px;
+            font-size: x-large;
+        }
+        .auto-style9
+        {
+            height: 70px;
+            width: 176px;
+            vertical-align: top;
+            background-color: #516C26;
+        }
+        .auto-style11
+        {
+            height: 22px;
+            width: 176px;
+            vertical-align: top;
+            background-color: #516C26;
+        }
+        .auto-style12
+        {
+            height: 4px;
+            width: 176px;
+            vertical-align: top;
+            background-color: #516C26;
+        }
+        .auto-style13
+        {
+            height: 3px;
+            width: 176px;
+            vertical-align: top;
+            background-color: #516C26;
+        }
+        .auto-style14
+        {
+            height: 17px;
+            width: 176px;
+            vertical-align: top;
+            background-color: #516C26;
+        }
+        .auto-style15
+        {
+            width: 176px;
+            vertical-align: top;
+            background-color: #516C26;
+        }
+        
+        .auto-style15:hover td{
+            background: red;
+        }
+
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style7" >
+                    <asp:Image ID="imgCanEastVendingLogo" runat="server" ImageUrl="~/images/caneastvending_logo.gif" />
+                    </td>
+                <td class="auto-style8" >
+                    <strong>Welcome to CanEastVending</strong></td>
+                <td class="auto-style5" >
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style9" >
+                    <asp:HyperLink ID="hlHome" runat="server" NavigateUrl="~/Home.html">Home</asp:HyperLink>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </td>
+                <td class="auto-style6" colspan="2" rowspan="7">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style14" onmouseover="style.color='red'" onmouseout="style.color='black'">
+                    <asp:HyperLink ID="hlAboutUs" runat="server" NavigateUrl="~/AboutUs.aspx">About Us</asp:HyperLink>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style11" >
+                    <asp:HyperLink ID="hlCanEastVendingViews" runat="server" NavigateUrl="~/CanEastVendingViews.aspx">CanEastVending views</asp:HyperLink>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style12" >
+                    <asp:HyperLink ID="hlXMLDocumentSearch" runat="server" NavigateUrl="~/XMLDocumentSearch.aspx">XML Document Search</asp:HyperLink>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style13" >
+                    <asp:HyperLink ID="hlWebService" runat="server" NavigateUrl="~/WebService.aspx">Web Service</asp:HyperLink>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style15" >
+                    <asp:HyperLink ID="hlManageDatabase" runat="server" NavigateUrl="~/ManageDatabase.aspx">Manage database</asp:HyperLink>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style4" >
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
