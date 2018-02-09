@@ -1,9 +1,9 @@
 
-# ![dataminers_logo](https://github.com/ridhwaans/caneast-vending-service/raw/master/images/dataminers_logo.jpg) CanEastVending
+# ![dataminers_logo](https://github.com/ridhwaans/caneast-vending-service/raw/master/screenshots/dataminers_logo.jpg) CanEastVending
 
 release 1.0
 
-![caneastvending_logo](https://github.com/ridhwaans/caneast-vending-service/raw/master/images/caneastvending_logo.jpg)
+![caneastvending_logo](https://github.com/ridhwaans/caneast-vending-service/raw/master/screenshots/caneastvending_logo.jpg)
 
 Designed and developed for ENGR 3700U '12.
 Technologies used: SOAP, mssql, ASP, XPath, ADO.NET, C#, VS2012
@@ -79,9 +79,9 @@ All of the VS 2012 project solution files for the ASP.NET interface and the C# a
 
 ## Schema
 
-# ![er_schema](https://github.com/ridhwaans/caneast-vending-service/raw/master/images/er_schema.jpg)
+# ![er_schema](https://github.com/ridhwaans/caneast-vending-service/raw/master/screenshots/er_schema.jpg)
 
-# ![relational_schema](https://github.com/ridhwaans/caneast-vending-service/raw/master/images/relational_schema.jpg)
+# ![relational_schema](https://github.com/ridhwaans/caneast-vending-service/raw/master/screenshots/relational_schema.jpg)
 
 ## Build instructions
 
@@ -103,6 +103,6 @@ All of the VS 2012 project solution files for the ASP.NET interface and the C# a
 ## Screenshots
 
 # Web
-![joined_web](https://github.com/ridhwaans/caneast-vending-service/raw/master/images/joined_web.jpg)
+![joined_web](https://github.com/ridhwaans/caneast-vending-service/raw/master/screenshots/joined_web.jpg)
 
 # Desktop
