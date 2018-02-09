@@ -1,10 +1,12 @@
 
-# CanEastVending
+# ![dataminers_logo](https://github.com/ridhwaans/caneast-vending-service/raw/master/images/dataminers_logo.jpg) CanEastVending
 
-ENGR 3700U
+release 1.0
+
+![caneastvending_logo](https://github.com/ridhwaans/caneast-vending-service/raw/master/images/caneastvending_logo.jpg)
 
 Designed and developed for ENGR 3700U '12.
-Technologies used: SOAP, mssql, ASP, ADO.NET, C#, VS2012
+Technologies used: SOAP, mssql, ASP, XPath, ADO.NET, C#, VS2012
 
 The project is structured like:
 ```
@@ -75,13 +77,32 @@ Fig 1. Project structure
 
 All of the VS 2012 project solution files for the ASP.NET interface and the C# application are included. The project files were restructured from a 'Visual Studio 2012' directory which contains the 'Projects' and 'WebSites' subdirectories (see Fig 1.)
 
-How to build from source (dev build):
+## Schema
 
-0. SQL Server service must be running prior for VS2012 to perform DDL migration
-1. Open Visual Studio 2012, Open Project:
+# ![er_schema](https://github.com/ridhwaans/caneast-vending-service/raw/master/images/er_schema.jpg)
 
-a) for the (ASP.NET) website path:
-My Documents-> Visual Studio 2012 -> Projects -> CanEastVending (web interface) folder -> CanEastVending (2) MS Visual Studio Solution
+# ![relational_schema](https://github.com/ridhwaans/caneast-vending-service/raw/master/images/relational_schema.jpg)
 
-b) for the desktop application path:
-My Documents-> Visual Studio 2012 -> Projects -> CanEastVending (desktop application program) folder -> CanEastVending MS Visual Studio Solution
+## Build instructions
+
+1. SQL Server must be running prior to running project from source
+2. Open Visual Studio 2012, Open Project:
+
+    (ASP.NET) web client: My Documents-> Visual Studio 2012 -> Projects -> CanEastVending (web interface) folder -> CanEastVending (2) MS Visual Studio Solution
+
+    IIS Express is the default server for web application projects in VS2012/2013. Other web server options include Local IIS and custom host; read https://msdn.microsoft.com/en-us/library/58wxa9w5(v=vs.120).aspx
+
+    desktop application: My Documents-> Visual Studio 2012 -> Projects -> CanEastVending (desktop application program) folder -> CanEastVending MS Visual Studio Solution
+
+    To build a binary executable of the `can-east-vending` client, read
+    https://msdn.microsoft.com/en-us/library/5tdasz7h(v=vs.110).aspx
+
+    To run client in debug mode, read https://msdn.microsoft.com/en-us/library/dd492157(v=vs.120).aspx
+
+
+## Screenshots
+
+# Web
+![joined_web](https://github.com/ridhwaans/caneast-vending-service/raw/master/images/joined_web.jpg)
+
+# Desktop
