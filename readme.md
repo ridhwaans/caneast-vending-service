@@ -73,19 +73,15 @@ Projects
 ```
 Fig 1. Project structure
 
-All of the VS 2012 project solution files for the ASP.NET interface and the C# application are included. The dev build files need to be restructured into a 'Visual Studio 2012' root directory which contains the 'Projects' and 'WebSites' directory which contain the CanEastVending project solution files (see Fig 1.)
+All of the VS 2012 project solution files for the ASP.NET interface and the C# application are included. The project files were restructured from a 'Visual Studio 2012' directory which contains the 'Projects' and 'WebSites' subdirectories (see Fig 1.)
 
 How to build from source (dev build):
 
 0. SQL Server service must be running prior for VS2012 to perform DDL migration
 1. Open Visual Studio 2012, Open Project:
 
-a) for the web interface/ website (ASP.NET) path:
+a) for the (ASP.NET) website path:
 My Documents-> Visual Studio 2012 -> Projects -> CanEastVending (web interface) folder -> CanEastVending (2) MS Visual Studio Solution
 
 b) for the desktop application path:
 My Documents-> Visual Studio 2012 -> Projects -> CanEastVending (desktop application program) folder -> CanEastVending MS Visual Studio Solution
-(MSDN Resources used: VistaAPI)
-
-
-Thank you
