@@ -1,9 +1,7 @@
 
-# ![dataminers_logo](https://github.com/ridhwaans/caneast-vending-service/raw/master/screenshots/dataminers_logo.jpg) CanEastVending
+# ![caneastvending_logo](https://github.com/ridhwaans/caneast-vending-service/raw/master/screenshots/caneastvending_logo.jpg) CanEastVending
 
-release 1.0
-
-![caneastvending_logo](https://github.com/ridhwaans/caneast-vending-service/raw/master/screenshots/caneastvending_logo.jpg)
+[![GitHub version](https://badge.fury.io/gh/boennemann%2Fbadges.svg)](http://badge.fury.io/gh/boennemann%2Fbadges)
 
 Designed and developed for ENGR 3700U '12.
 Technologies used: SOAP, mssql, ASP, XPath, ADO.NET, C#, VS2012
@@ -73,7 +71,6 @@ Projects
         ├── XMLDocumentSearch.aspx
         └── XMLDocumentSearch.aspx.vb
 ```
-Fig 1. Project structure
 
 All of the VS 2012 project solution files for the ASP.NET interface and the C# application are included. The project files were restructured from a 'Visual Studio 2012' directory which contains the 'Projects' and 'WebSites' subdirectories (see Fig 1.)
 
@@ -99,10 +96,16 @@ All of the VS 2012 project solution files for the ASP.NET interface and the C# a
 
     To run client in debug mode, read https://msdn.microsoft.com/en-us/library/dd492157(v=vs.120).aspx
 
-
 ## Screenshots
 
 # Web
 ![joined_web](https://github.com/ridhwaans/caneast-vending-service/raw/master/screenshots/joined_web.jpg)
+**Fig. 1** *clockwise from top-left: MachinesInOperation View, XPath Search engine, CanEastvending admin console, FindTimeSpan and ViewCurrentInventory service, Database View homepage, Rented Machine Area View, Low Inventory Machines View, CanEastvending homepage*
 
 # Desktop
+![caneastvending_app](https://github.com/ridhwaans/caneast-vending-service/raw/master/screenshots/caneastvending_app.jpg)
+**Fig. 2** *app for Desktop; CanEastVending guest account*
+
+## License
+
+The content of this project itself is licensed under the [Creative Commons Attribution 3.0 license](http://creativecommons.org/licenses/by/3.0/us/deed.en_US), and the underlying source code used to format and display that content is licensed under the [MIT license](http://opensource.org/licenses/mit-license.php).
