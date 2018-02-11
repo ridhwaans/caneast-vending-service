@@ -3,8 +3,25 @@
 
 [![GitHub version](https://badge.fury.io/gh/boennemann%2Fbadges.svg)](http://badge.fury.io/gh/boennemann%2Fbadges)
 
-Designed and developed for ENGR 3700U '12.
-Technologies used: SOAP, mssql, ASP, XPath, ADO.NET, C#, VS2012
+Table of Contents
+=================
+
+  * [Abstract](#abstract)
+  * [Schema](#schema)
+    * [Views](#views)
+  * [Build instructions](#build-instructions)
+  * [Features](#features)
+    * [Web](#web)
+    * [Desktop](#desktop)
+  * [License](#license)
+
+Abstract
+============
+
+`caneast-vending-service` is a vending machine inventory tracking system. Client and server interfaces to be used by all corporate and retail personnel at Can-East Vending Inc.
+
+Designed and developed for ENGR 3700U '12.  
+Technologies used: SOAP, mssql, ASP, XPath, ADO.NET, ActiveDirectory, C#, LDAP, VS2012
 
 The project is structured like:
 ```
@@ -71,16 +88,53 @@ Projects
         ├── XMLDocumentSearch.aspx
         └── XMLDocumentSearch.aspx.vb
 ```
+**Fig. 1** *project structure*
 
 All of the VS 2012 project solution files for the ASP.NET interface and the C# application are included. The project files were restructured from a 'Visual Studio 2012' directory which contains the 'Projects' and 'WebSites' subdirectories (see Fig 1.)
 
-## Schema
+Schema
+============
 
 # ![er_schema](https://github.com/ridhwaans/caneast-vending-service/raw/master/screenshots/er_schema.jpg)
+**Fig. 1** *database ER*
 
 # ![relational_schema](https://github.com/ridhwaans/caneast-vending-service/raw/master/screenshots/relational_schema.jpg)
+**Fig. 2** *relational schema*
 
-## Build instructions
+Relations | Views
+--- | ---
+Customer | ActiveMachinesInOperation 
+Employee | CustRentals 
+Location | EmployeesDeliveredPepsi 
+Machine | EmployeesWhoHaveDeliveredInOshawa 
+MachineInventory | HighCapacityMachinesInStorage 
+Orders | LessThanAverageDrinkPrice 
+Products | LowInventoryMachines
+Rentals | RemainingProductQuantity 
+| RentedMachineLocations 
+| TorontoOttawaRentedMachines
+**Fig. 3** *list of SQL tables and views*
+
+Views
+------------
+Information about virtual tables used by the vending service to track orders and inventory. Full SQL DDL script found in `Visual Studio 2012\Projects\CanEastVending\bin\Debug\Database.mdf`
+
+View | Description
+--- | ---
+Active Machines in Operation | This view allows for the managers of Can‐East Vending to get a complete overview of all the machines that they own.  The data from this view can be used to see which geographical locations are serviced by Can‐East vending machines.
+Customer Rentals | Can‐East's financing department will need to know which machines are currently being rented and who is renting them. This view also provides an excellent overview of the customer base and can be used to facilitate communications with all of Can‐East's vending partners.
+Employees Who Delivered Pepsi | If there's reports from customers that there is a problem with Pepsi products that have been delivered to their location, we will be able to quickly identify which employees have delivered Pepsi products and see if there are any correlations between employees and the customer reports.
+Employees Who Delivered in Oshawa | This view provides a similar benefit to the one directly above. If customers in Oshawa are reporting problems with their deliveries, we can quickly and efficiently interview the employees who may be involved in these problems and resolve them as quickly as possible.
+High Capacity Machines in Storage | Knows which machines Can‐East has in storage in case of customer demand.  If a customer comes in requesting machines with a large capacity, we need to be able to provide them with the information about which machines we have available as fast as possible in order to increase the chances of closing the deal.
+Less Than Average Drink Prices | In order to maximize the sales and revenue from our machines, we need to provide a set of products that covers a range of prices.  This view allows for the customers and Can‐East employees to view the lower cost drinks so that they can decide which drinks they want to optimize the contents of a vending machine.
+Low Inventory Machines | Machines that are running low on inventory (less than 50% of their capacity) need to be refilled as soon as possible to ensure that there always will be a product available to the customer. By identifying low inventory machines, our employees will be able to go to the machines and refill them exactly when it is needed.
+Remaining Product Quantity | The data generated from this view can be used to determine which products are selling the best when analyzed over a period of time. By providing the customers with the most popular products we will be able to maximize revenue for our machines.
+Rented Machine Locations | Geographic data is one of the most important aspects in the successful operation of Can‐East Vending.  This data can be used for a wide variety of reasons from directing marketing to high density areas to providing location maps for technicians and maintenance employees.
+Toronto and Ottawa Rented Machines | Since Toronto and Ottawa are the two largest cities in Ontario, it is expected that many of our machines will be concentrated within these cities.  By providing data about only these two cities, Can‐East will be able to better optimize the products and machine placement within the high machine density cities.  
+
+
+Build instructions
+============
 
 1. SQL Server must be running prior to running project from source
 2. Open Visual Studio 2012, Open Project:
@@ -96,16 +150,27 @@ All of the VS 2012 project solution files for the ASP.NET interface and the C# a
 
     To run client in debug mode, read https://msdn.microsoft.com/en-us/library/dd492157(v=vs.120).aspx
 
-## Screenshots
+Features
+============
 
-# Web
+## Web
 ![joined_web](https://github.com/ridhwaans/caneast-vending-service/raw/master/screenshots/joined_web.jpg)
-**Fig. 1** *clockwise from top-left: MachinesInOperation View, XPath Search engine, CanEastvending admin console, FindTimeSpan and ViewCurrentInventory service, Database View homepage, Rented Machine Area View, Low Inventory Machines View, CanEastvending homepage*
+**Fig. 2** *clockwise from top-left: MachinesInOperation View, XPath Search engine, CanEastvending admin console, FindTimeSpan and ViewCurrentInventory service, Database View homepage, Rented Machine Area View, Low Inventory Machines View, CanEastvending homepage*
 
-# Desktop
+## Desktop
 ![caneastvending_app](https://github.com/ridhwaans/caneast-vending-service/raw/master/screenshots/caneastvending_app.jpg)
-**Fig. 2** *app for Desktop; CanEastVending guest account*
+**Fig. 3** *app for Desktop; CanEastVending guest account*
 
-## License
+Desktop application leverages ActiveDirectory to allow guests or company users to manage CanEastVending assets. The client interacts with the CanEastVending IIS server and the database (specified by connection string)  
+
+#### ADMIN Features
+- View and manage Customers (create/remove cohorts, update profile records)
+- View and manage Employees (company directory)
+- View and manage Vending Machines in operation (change dates, deploy/recall units, filter by region)
+- View and manage Orders (edit machine restock orders, invoices)
+- Browse inventory (view brand partners and vending machine products)
+
+License
+============
 
 The content of this project itself is licensed under the [Creative Commons Attribution 3.0 license](http://creativecommons.org/licenses/by/3.0/us/deed.en_US), and the underlying source code used to format and display that content is licensed under the [MIT license](http://opensource.org/licenses/mit-license.php).
