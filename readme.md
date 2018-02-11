@@ -96,10 +96,10 @@ Schema
 ============
 
 # ![er_schema](https://github.com/ridhwaans/caneast-vending-service/raw/master/screenshots/er_schema.jpg)
-**Fig. 1** *database ER*
+**Fig. 2** *database ER*
 
 # ![relational_schema](https://github.com/ridhwaans/caneast-vending-service/raw/master/screenshots/relational_schema.jpg)
-**Fig. 2** *relational schema*
+**Fig. 3** *relational schema*
 
 Relations | Views
 --- | ---
@@ -113,7 +113,7 @@ Products | LowInventoryMachines
 Rentals | RemainingProductQuantity 
 | RentedMachineLocations 
 | TorontoOttawaRentedMachines
-**Fig. 3** *list of SQL tables and views*
+**Fig. 4** *list of SQL tables and views*
 
 Views
 ------------
@@ -131,7 +131,7 @@ Low Inventory Machines | Machines that are running low on inventory (less than 5
 Remaining Product Quantity | The data generated from this view can be used to determine which products are selling the best when analyzed over a period of time. By providing the customers with the most popular products we will be able to maximize revenue for our machines.
 Rented Machine Locations | Geographic data is one of the most important aspects in the successful operation of Can‐East Vending.  This data can be used for a wide variety of reasons from directing marketing to high density areas to providing location maps for technicians and maintenance employees.
 Toronto and Ottawa Rented Machines | Since Toronto and Ottawa are the two largest cities in Ontario, it is expected that many of our machines will be concentrated within these cities.  By providing data about only these two cities, Can‐East will be able to better optimize the products and machine placement within the high machine density cities.  
-
+**Fig. 5** *SQL views*
 
 Build instructions
 ============
@@ -155,11 +155,11 @@ Features
 
 ## Web
 ![joined_web](https://github.com/ridhwaans/caneast-vending-service/raw/master/screenshots/joined_web.jpg)
-**Fig. 2** *clockwise from top-left: MachinesInOperation View, XPath Search engine, CanEastvending admin console, FindTimeSpan and ViewCurrentInventory service, Database View homepage, Rented Machine Area View, Low Inventory Machines View, CanEastvending homepage*
+**Fig. 6** *clockwise from top-left: MachinesInOperation View, XPath Search engine, CanEastvending admin console, FindTimeSpan and ViewCurrentInventory service, Database View homepage, Rented Machine Area View, Low Inventory Machines View, CanEastvending homepage*
 
 ## Desktop
 ![caneastvending_app](https://github.com/ridhwaans/caneast-vending-service/raw/master/screenshots/caneastvending_app.jpg)
-**Fig. 3** *app for Desktop; CanEastVending guest account*
+**Fig. 7** *app for Desktop homescreen; CanEastVending guest account*
 
 Desktop application leverages ActiveDirectory to allow guests or company users to manage CanEastVending assets. The client interacts with the CanEastVending IIS server and the database (specified by connection string)  
 
