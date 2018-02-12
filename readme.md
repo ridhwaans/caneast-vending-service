@@ -113,6 +113,7 @@ Products | LowInventoryMachines
 Rentals | RemainingProductQuantity 
 | RentedMachineLocations 
 | TorontoOttawaRentedMachines
+
 **Fig. 4** *list of SQL tables and views*
 
 Views
@@ -131,6 +132,7 @@ Low Inventory Machines | Machines that are running low on inventory (less than 5
 Remaining Product Quantity | The data generated from this view can be used to determine which products are selling the best when analyzed over a period of time. By providing the customers with the most popular products we will be able to maximize revenue for our machines.
 Rented Machine Locations | Geographic data is one of the most important aspects in the successful operation of Can‐East Vending.  This data can be used for a wide variety of reasons from directing marketing to high density areas to providing location maps for technicians and maintenance employees.
 Toronto and Ottawa Rented Machines | Since Toronto and Ottawa are the two largest cities in Ontario, it is expected that many of our machines will be concentrated within these cities.  By providing data about only these two cities, Can‐East will be able to better optimize the products and machine placement within the high machine density cities.  
+
 **Fig. 5** *SQL views*
 
 Build instructions
