@@ -20,7 +20,7 @@ Abstract
 
 `caneast-vending-service` is a vending machine inventory tracking system. Client and server interfaces to be used by all corporate and retail personnel at Can-East Vending Inc.
 
-Designed and developed for ENGR 3700U '12.  
+Made for ENGR 3700U '12.  
 Technologies used: SOAP, mssql, ASP, XPath, ADO.NET, ActiveDirectory, C#, LDAP, VS2012
 
 The project is structured like:
